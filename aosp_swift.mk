@@ -1,0 +1,24 @@
+#
+# Setup device specific product configuration.
+#
+
+PRODUCT_NAME := swift
+PRODUCT_BRAND := LGE
+PRODUCT_DEVICE := swift
+PRODUCT_MODEL := GT540
+PRODUCT_MANUFACTURER := LGE
+PRODUCT_RELEASE_NAME := AOSP
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+	BUILD_ID=GWK74 \
+	BUILD_FINGERPRINT=lge/thunderg/thunderg:2.3.3/GRI40/LG-P500-V20d.19D35AE3BE:user/ota-rel-keys,release-keys \
+	PRIVATE_BUILD_DESC="thunderg-user 2.3.3 GRI40 LG-P500-V20d.19D35AE3BE ota-rel-keys,release-keys" \
+
+PRODUCT_SPECIFIC_DEFINES += TARGET_PRELINKER_MAP=$(TOP)/device/lge/swift/prelink-linux-arm-3G-swift.map
+
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=GWK74
+
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
+
+# Tiny toolbox
+TINY_TOOLBOX := true
